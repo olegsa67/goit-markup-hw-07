@@ -1,6 +1,7 @@
 .form {
+    display: inline-block;
     gap: 8px;
-    margin-left: auto;
+    margin-left: 100px;
 }
 
 .form-title {
@@ -64,6 +65,8 @@
 }
 
 .form-icon {
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
 }
 
