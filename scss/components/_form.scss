@@ -70,16 +70,16 @@
             text-align: center;
             letter-spacing: 0.06em;
             color: #ffffff;
+            &:hover,
+            &:focus {
+                background-color: #188ce8;
+            }
         }
-    }
-    &__icon {
-        display: block;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-    &__button:hover,
-    &__button:focus {
-        background-color: #188ce8;
+        &__icon {
+            display: block;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
     }
 }

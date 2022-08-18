@@ -642,7 +642,10 @@ img {
   letter-spacing: 0.06em;
   color: #ffffff;
 }
-.form__icon {
+.form__button-text:hover, .form__button-text:focus {
+  background-color: #188ce8;
+}
+.form__button__icon {
   display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -651,9 +654,6 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
-}
-.form__button:hover, .form__button:focus {
-  background-color: #188ce8;
 }
 
 .header {
