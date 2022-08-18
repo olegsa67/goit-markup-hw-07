@@ -1,65 +1,58 @@
 .footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding-top: 60px;
     padding-bottom: 60px;
-    background-color: #2F303A;
+    background-color: #2f303a;
     font-family: var(--main-font);
     font-weight: 400;
     font-size: 14px;
     line-height: calc(24 / 14);
     letter-spacing: 0.03em;
-}
-
-.footer-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    &__container {
+        display: flex;
+        gap: 30px;
+        align-items: baseline;
+        justify-content: center;
+    }
+    &__logo {
+        display: block;
+        margin: 0 0 20px 0;
+        width: 145px;
+    }
+    &__item {
+        margin-top: 10px;
+    }
+    &__contact {
+        color: rgba(255, 255, 255, 0.6);
+    }
+    &__address {
+        color: #ffffff;
+    }
+    &__link {
+        background-color: rgba(255, 255, 255, 0.1);
+        fill: #ffffff;
+    }
+    &__socials {
+        color: #ffffff;
+    }
+    &__form {
+        margin-left: auto;
+    }
 }
 
 .contacts-address {
-    display: inline-block;
     font-style: normal;
-    gap: 70px;
 }
 
-.footer-logo {
+.logo {
     display: block;
-    margin: 0 0 20px 0;
-    width: 145px;
-}
-
-.footer__item {
-    margin-top: 10px;
-}
-
-.footer__contact {
-    color: rgba(255, 255, 255, 0.6);
-}
-
-.footer__address {
-    color: #ffffff;
-}
-
-.social {
-    display: inline-block;
-    margin-left: 70px;
-}
-
-.social__header {
-    align-items: center;
-    justify-content: center;
+    margin-top: 24px;
+    margin-right: 93px;
+    margin-bottom: 25px;
+    margin-left: 15px;
+    font-family: var(--logo-font);
     font-weight: 700;
-    font-size: 14px;
-    line-height: calc(16 / 14);
+    font-size: 26px;
+    line-height: calc(31 / 26);
     letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-}
-
-.footer-link {
-    background-color: rgba(255, 255, 255, 0.1);
-    fill: #FFFFFF;
+    color: var(--accent-cl);
 }
