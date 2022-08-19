@@ -19,11 +19,13 @@
     &__link {
         padding-top: 32px;
         padding-bottom: 32px;
+        transition-property: color;
+        transition: color var(--anim);
         color: var(--dark-cl);
-        &__link:hover,
-        &__link:focus {
-            color: var(--accent-cl);
-        }
+    }
+    &__link:hover,
+    &__link:focus {
+        color: var(--accent-cl);
     }
     /* активна сторінка */
     .current-page {
