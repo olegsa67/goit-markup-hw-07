@@ -20,28 +20,3 @@
         text-transform: uppercase;
     }
 }
-
-.button-action {
-    max-width: 250px;
-    min-width: 160px;
-    max-height: 50px;
-    padding: 10px 32px;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    margin-top: 30px;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(30 / 16);
-    letter-spacing: 0.06em;
-    color: var(--btn-txt-cl);
-    background-color: var(--accent-cl);
-    cursor: pointer;
-    border: none;
-    transition-property: background-color;
-    transition: background-color var(--anim);
-    &:hover,
-    &:focus {
-        background-color: #188ce8;
-    }
-}

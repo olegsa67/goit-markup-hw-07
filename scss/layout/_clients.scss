@@ -25,7 +25,7 @@
         border: 1px solid #afb1b8;
         border-radius: 4px;
         transition-property: border, fill;
-        transition: background-color var(--anim), fill var(--anim);
+        transition: border var(--anim), fill var(--anim);
         &:hover,
         &:focus {
             fill: var(--accent-cl);

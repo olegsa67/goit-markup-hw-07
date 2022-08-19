@@ -41,6 +41,9 @@
         color: var(--main-txt-cl);
     }
     &__item {
+        border-radius: 4px;
+        transition-property: box-shadow;
+        transition: box-shadow var(--anim);
         &:hover,
         &:focus {
             cursor: pointer;

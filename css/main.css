@@ -6,8 +6,9 @@
   /* colors */
   --main-txt-cl: #757575;
   --title-txt-cl: #212121;
-  --accent-cl: #2196F3;
+  --accent-cl: #2196f3;
   --btn-txt-cl: #ffffff;
+  --btn-cl: #188ce8;
   --dark-cl: #000000;
   --light-cl: #ffffff;
   /* others */
@@ -89,7 +90,6 @@ img {
   margin-top: 24px;
   margin-right: 93px;
   margin-bottom: 25px;
-  margin-left: 15px;
   font-family: var(--logo-font);
   font-weight: 700;
   font-size: 26px;
@@ -106,18 +106,24 @@ img {
   color: var(--light-cl);
 }
 
-.bnt {
+.button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 50px;
   gap: 8px;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition: background-color var(--anim);
+  transition: background-color var(--anim);
   cursor: pointer;
 }
-.bnt:hover, .bnt:focus {
+.button:hover, .button:focus {
   color: var(--btn-txt-cl);
   background-color: var(--accent-txt-cl);
 }
@@ -146,7 +152,7 @@ img {
   transition: background-color var(--anim);
 }
 .button-action:hover, .button-action:focus {
-  background-color: #188CE8;
+  background-color: var(--btn-cl);
 }
 
 .filter-list {
@@ -156,7 +162,11 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 8px;
+  margin-bottom: 50px;
 }
 
 .button-filter {
@@ -167,7 +177,7 @@ img {
   line-height: 1.625;
   letter-spacing: 0.06em;
   color: var(--title-txt-cl);
-  background-color: #F5F4FA;
+  background-color: #f5f4fa;
   border: none;
   cursor: pointer;
   border-radius: 4px;
@@ -181,7 +191,7 @@ img {
   transition: background-color var(--anim), color var(--anim), box-shadow var(--anim), -webkit-box-shadow var(--anim);
 }
 .button-filter:hover, .button-filter:focus {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: var(--accent-cl);
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -189,7 +199,7 @@ img {
 
 /* активна кнопка */
 .current-item {
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: var(--accent-cl);
 }
 
@@ -211,20 +221,20 @@ img {
   width: 100%;
   height: 100%;
   padding: 63px 24px;
+  color: #ffffff;
   background-color: rgba(33, 150, 243, 0.9);
   -webkit-transition: -webkit-transform var(--anim);
   transition: -webkit-transform var(--anim);
   transition: transform var(--anim);
   transition: transform var(--anim), -webkit-transform var(--anim);
 }
-
 .overlay-text {
   font-family: var(--main-font);
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5555555556;
+  /* or 156% */
   letter-spacing: 0.03em;
-  color: #ffffff;
   text-align: left;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -404,11 +414,6 @@ img {
   border-radius: 4px;
   outline: transparent;
 }
-.register-form__input:focus, .register-form__input:hover, .register-form__message:focus, .register-form__message:hover {
-  border: 1px solid var(--accent-cl);
-  background-color: transparent;
-  cursor: pointer;
-}
 .register-form__message {
   padding-top: 12px;
   padding-left: 16px;
@@ -419,22 +424,23 @@ img {
   color: rgba(117, 117, 117, 0.5);
   height: 120px;
   resize: none;
-}
-.register-form__message:focus, .register-form__message:hover {
-  border: 1px solid var(--accent-cl);
-  background-color: transparent;
-  cursor: pointer;
+  -webkit-transition-property: baborder-color;
+  transition-property: baborder-color;
+  -webkit-transition: border var(--anim);
+  transition: border var(--anim);
 }
 .register-form__item {
   position: relative;
+  -webkit-transition-property: border-color;
+  transition-property: border-color;
 }
-.register-form__item:hover .register-form__item__input, .register-form__item:focus-within .register-form__item__input {
+.register-form__item:hover .register-form__input, .register-form__item:focus-within .register-form__input {
   border-color: var(--accent-cl);
   -webkit-transition: border-color var(--anim);
   transition: border-color var(--anim);
   cursor: pointer;
 }
-.register-form__item:hover .register-form__item__icon, .register-form__item:focus-within .register-form__item__icon {
+.register-form__item:hover .register-form__icon, .register-form__item:focus-within .register-form__icon {
   fill: var(--accent-cl);
   -webkit-transition: fill var(--anim);
   transition: fill var(--anim);
@@ -451,8 +457,8 @@ img {
   -webkit-transition: fill var(--anim);
   transition: fill var(--anim);
 }
-.register-form__icon:focus, .register-form__icon:hover {
-  fill: var(--accent-cl);
+.register-form__message:focus, .register-form__message:hover {
+  border: 1px solid var(--accent-cl);
   background-color: transparent;
   cursor: pointer;
 }
@@ -470,22 +476,6 @@ img {
   margin-bottom: 30px;
   cursor: pointer;
 }
-.register-form__agreement-text {
-  text-align: center;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7142857143;
-  letter-spacing: 0.03em;
-  color: #757575;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  text-underline-position: under;
-}
-.register-form__agreement-link {
-  color: var(--accent-cl);
-}
 .register-form .register-icon-uncheck,
 .register-form .register-icon-check {
   width: 16px;
@@ -499,18 +489,36 @@ img {
 .register-form .register-icon-check {
   opacity: 0;
   fill: var(--accent-cl);
+  -webkit-transition-property: all;
+  transition-property: all;
   -webkit-transition: opacity var(--anim);
   transition: opacity var(--anim);
+  -webkit-transition: fill var(--anim);
+  transition: fill var(--anim);
 }
 .register-form .register-icon-check:focus,
 .register-form .register-icon-check:hover {
   fill: var(--accent-cl);
-  -webkit-transition: fill var(--anim);
-  transition: fill var(--anim);
   cursor: pointer;
 }
 .register-form .register-checkbox:checked + .register-icon .register-icon-check {
   opacity: 1;
+}
+.register-form__agreement-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142857143;
+  letter-spacing: 0.03em;
+  color: var(--main-txt-cl);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-underline-position: under;
+}
+.register-form__agreement-link {
+  color: var(--accent-cl);
 }
 .register-form__btn {
   display: -webkit-inline-box;
@@ -531,13 +539,13 @@ img {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   cursor: pointer;
-  -webkit-transition: opacity var(--anim);
-  transition: opacity var(--anim);
-}
-.register-form__btn:focus, .register-form__btn:hover {
-  background-color: #188ce8;
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
   -webkit-transition: background-color var(--anim);
   transition: background-color var(--anim);
+}
+.register-form__btn:focus, .register-form__btn:hover {
+  background-color: var(--btn-cl);
   cursor: pointer;
 }
 
@@ -633,7 +641,7 @@ img {
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.875;
   /* identical to box height, or 188% */
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -642,8 +650,8 @@ img {
   letter-spacing: 0.06em;
   color: #ffffff;
 }
-.form__button-text:hover, .form__button-text:focus {
-  background-color: #188ce8;
+.form__button:hover, .form__button:focus {
+  background-color: var(--btn-cl);
 }
 .form__button__icon {
   display: block;
@@ -658,6 +666,7 @@ img {
 
 .header {
   border-bottom: 1px solid #ececec;
+  /* активна сторінка */
 }
 .header__container {
   display: -webkit-box;
@@ -684,17 +693,15 @@ img {
 .header__link {
   padding-top: 32px;
   padding-bottom: 32px;
-  color: #000000;
+  color: var(--dark-cl);
 }
-.header__link:hover, .header__link:focus {
+.header__link__link:hover, .header__link__link:focus {
   color: var(--accent-cl);
 }
-
-/* активна сторінка */
-.current-page {
+.header .current-page {
   color: var(--accent-cl);
 }
-.current-page::after {
+.header .current-page::after {
   content: "";
   position: relative;
   top: 28px;
@@ -729,33 +736,6 @@ img {
   letter-spacing: 0.06em;
   color: #ffffff;
   text-transform: uppercase;
-}
-
-.button-action {
-  max-width: 250px;
-  min-width: 160px;
-  max-height: 50px;
-  padding: 10px 32px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  margin-top: 30px;
-  font-family: inherit;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.06em;
-  color: var(--btn-txt-cl);
-  background-color: var(--accent-cl);
-  cursor: pointer;
-  border: none;
-  -webkit-transition-property: background-color;
-  transition-property: background-color;
-  -webkit-transition: background-color var(--anim);
-  transition: background-color var(--anim);
-}
-.button-action:hover, .button-action:focus {
-  background-color: #188ce8;
 }
 
 .feature {
@@ -942,8 +922,8 @@ img {
   border-radius: 4px;
   -webkit-transition-property: border, fill;
   transition-property: border, fill;
-  -webkit-transition: background-color var(--anim), fill var(--anim);
-  transition: background-color var(--anim), fill var(--anim);
+  -webkit-transition: border var(--anim), fill var(--anim);
+  transition: border var(--anim), fill var(--anim);
 }
 .clients__link:hover, .clients__link:focus {
   fill: var(--accent-cl);
@@ -1006,6 +986,17 @@ img {
   font-size: 16px;
   line-height: 1.875;
   color: var(--main-txt-cl);
+}
+.portfolio__item {
+  border-radius: 4px;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition: -webkit-box-shadow var(--anim);
+  transition: -webkit-box-shadow var(--anim);
+  transition: box-shadow var(--anim);
+  transition: box-shadow var(--anim), -webkit-box-shadow var(--anim);
 }
 .portfolio__item:hover, .portfolio__item:focus {
   cursor: pointer;
@@ -1144,7 +1135,6 @@ img {
 }
 .footer__logo {
   display: block;
-  margin: 0 0 20px 0;
   width: 145px;
 }
 .footer__item {
@@ -1169,20 +1159,6 @@ img {
 
 .contacts-address {
   font-style: normal;
-}
-
-.logo {
-  display: block;
-  margin-top: 24px;
-  margin-right: 93px;
-  margin-bottom: 25px;
-  margin-left: 15px;
-  font-family: var(--logo-font);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.1923076923;
-  letter-spacing: 0.03em;
-  color: var(--accent-cl);
 }
 
 /*.label-agreement {
